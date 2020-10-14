@@ -2,6 +2,12 @@ module.exports = {
   up: async (queryInterface) => {
     queryInterface.bulkInsert('frequency', [
       {
+        name: 'single',
+        intervalOfDays: 0,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
         name: 'weekly',
         intervalOfDays: 7,
         created_at: new Date(),
