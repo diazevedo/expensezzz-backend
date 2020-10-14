@@ -15,9 +15,14 @@ class Creditor extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Creditor, {
+    this.belongsTo(models.User, {
       foreignKey: 'debtor_id',
       as: 'debtor',
+    });
+
+    this.belongsTo(models.CreditorType, {
+      foreignKey: 'type_id',
+      as: 'type',
     });
   }
 }

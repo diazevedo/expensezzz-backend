@@ -2,10 +2,11 @@ import Sequelize from 'sequelize';
 
 import Creditor from '../app/models/Creditor';
 import User from '../app/models/User';
+import CreditorType from '../app/models/CreditorType';
 
 import databaseConfig from '../config/database';
 
-const models = [Creditor, User];
+const models = [Creditor, User, CreditorType];
 
 class Database {
   constructor() {
