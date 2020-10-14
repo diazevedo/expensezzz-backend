@@ -4,7 +4,7 @@ module.exports = {
       type: Sequelize.INTEGER,
       references: {
         model: 'creditor_types',
-        key: '_id',
+        key: 'id',
       },
       onUpdate: 'CASCADE',
       onDelete: 'SET NULL',

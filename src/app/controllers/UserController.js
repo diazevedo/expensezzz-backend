@@ -10,7 +10,7 @@ class UserController {
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation has failed.' });
+      return res.status(409).json({ error: 'Validation has failed.' });
     }
 
     const userExists = await User.findOne({
@@ -18,7 +18,7 @@ class UserController {
     });
 
     if (userExists) {
-      return res.status(400).json({
+      return res.status(409).json({
         error: 'Sorry, this email is already registered.',
       });
     }

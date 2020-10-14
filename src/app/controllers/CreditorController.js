@@ -15,10 +15,10 @@ class CreditorController {
     });
 
     if (!(await schema.isValid(req.body)))
-      return res.status(401).json({ error: 'creditor name is required.' });
+      return res.status(400).json({ error: 'creditor name is required.' });
 
     const user = await User.findOne({ where: { id: req.userId } });
-    if (!user) return res.status(401).json({ error: 'user is not valid.' });
+    if (!user) return res.status(400).json({ error: 'user is not valid.' });
 
     const type_id = req.body.type_id ? req.body.type_id : null;
 
@@ -31,7 +31,7 @@ class CreditorController {
     });
 
     if (creditorValidation) {
-      return res.status(401).json({ error: 'This creditor already exists.' });
+      return res.status(409).json({ error: 'This creditor already exists.' });
     }
 
     const creditor = await Creditor.create({

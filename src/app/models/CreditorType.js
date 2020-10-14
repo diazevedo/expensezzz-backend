@@ -4,7 +4,6 @@ class CreditorType extends Model {
   static init(sequelize) {
     super.init(
       {
-        _id: Sequelize.INTEGER,
         type: Sequelize.STRING,
       },
       {

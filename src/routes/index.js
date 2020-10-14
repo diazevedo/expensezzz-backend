@@ -2,6 +2,7 @@ import { Router } from 'express';
 import sessionRoutes from './session';
 import creditorRoutes from './creditor';
 import userRoutes from './user';
+import creditorTypeRoutes from './creditorType';
 
 import checkTokenMD from '../app/middlewares/jwt';
 
@@ -17,5 +18,6 @@ routes.use(userRoutes);
 /** Auth is required to routes below */
 routes.use(checkTokenMD);
 routes.use(creditorRoutes);
+routes.use(creditorTypeRoutes);
 
 export default routes;
