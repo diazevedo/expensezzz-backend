@@ -2,7 +2,7 @@ const Datatypes = require('sequelize').DataTypes;
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    queryInterface.createTable('frequency', {
+    queryInterface.createTable('frequencies', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      intervalOfDays: {
+      interval_of_days: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
@@ -39,6 +39,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    return queryInterface.dropTable('frequency');
+    return queryInterface.dropTable('frequencies');
   },
 };

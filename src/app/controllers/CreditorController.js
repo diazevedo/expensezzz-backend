@@ -40,7 +40,7 @@ class CreditorController {
       type_id,
     });
 
-    return res.json({ id: creditor.id, name: creditor.name });
+    return res.status(201).json({ id: creditor.id, name: creditor.name });
   }
 }
 

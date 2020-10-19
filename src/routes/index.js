@@ -3,6 +3,7 @@ import sessionRoutes from './session';
 import creditorRoutes from './creditor';
 import userRoutes from './user';
 import creditorTypeRoutes from './creditorType';
+import frequencyRoutes from './frequency';
 
 import checkTokenMD from '../app/middlewares/jwt';
 
@@ -19,5 +20,6 @@ routes.use(userRoutes);
 routes.use(checkTokenMD);
 routes.use(creditorRoutes);
 routes.use(creditorTypeRoutes);
+routes.use(frequencyRoutes);
 
 export default routes;

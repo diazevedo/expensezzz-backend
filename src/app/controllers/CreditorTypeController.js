@@ -32,7 +32,7 @@ class CreditorTypeController {
       type: req.body.type,
     });
 
-    return res.json({ creditorType: newCreditorType });
+    return res.status(201).json({ creditorType: newCreditorType });
   }
 }
 

@@ -5,7 +5,7 @@ class Frequency extends Model {
     super.init(
       {
         name: Sequelize.STRING,
-        intervalOfDays: Sequelize.INTEGER,
+        interval_of_days: Sequelize.INTEGER,
       },
       {
         sequelize,

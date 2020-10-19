@@ -44,7 +44,7 @@ module.exports = {
       frequency: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'frequency',
+          model: 'frequencies',
           key: 'id',
         },
         onUpdate: 'CASCADE',
